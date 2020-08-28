@@ -46,8 +46,8 @@ heatmap.3 <- function(x,
                       lwid = NULL,
                       ColSideColorsSize = 1,
                       RowSideColorsSize = 1,
-                      KeyValueName="Value",...)
-                      KeyTitle = "ColorKey"{
+                      KeyValueName="Value",
+                      KeyTitle = "ColorKey",...){
 
     invalid <- function (x) {
       if (missing(x) || is.null(x) || length(x) == 0)
