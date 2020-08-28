@@ -46,7 +46,8 @@ heatmap.3 <- function(x,
                       lwid = NULL,
                       ColSideColorsSize = 1,
                       RowSideColorsSize = 1,
-                      KeyValueName="Value",...){
+                      KeyValueName="Value",...)
+                      KeyTitle = "ColorKey"{
 
     invalid <- function (x) {
       if (missing(x) || is.null(x) || length(x) == 0)
@@ -440,7 +441,7 @@ heatmap.3 <- function(x,
             par(cex = 0.5)
             mtext(side = 2, "Count", line = 2)
         }
-        else title("Color Key")
+        else title(KeyTitle)
     }
     else plot.new()
     retval$colorTable <- data.frame(low = retval$breaks[-length(retval$breaks)],
